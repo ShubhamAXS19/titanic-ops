@@ -1,6 +1,73 @@
-titanic-ops
-==============================
+# titanic-ops
 
+## Prerequisites
+Before you begin, ensure you have the following installed:
+
+Python 3.8+
+Git
+DVC
+MLflow
+AWS CLI (for interacting with AWS S3)
+
+### 0. Configure AWS locally
+
+Open terminal and run 
+
+```
+aws configure
+```
+
+Provide Access Key ID and password for the same 
+
+## Getting Started
+### 1. Clone the repository:
+
+```
+git clone https://github.com/ShubhamAXS19/titanic-ops.git
+cd titanic-ops
+```
+### 2. Set Up Virtual Environment
+```
+# Create a virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+# On macOS/Linux:
+source venv/bin/activate
+
+# On Windows:
+venv\Scripts\activate
+```
+
+### 3.Install Dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 4. Set Up Git repo and DVC
+
+```
+git init
+dvc init
+```
+
+### 5. S3 Bucket Cred
+
+Replace the **BUCKET_NAME** and **S3_KEYS** in the ./src/utils/Fetch-Data-AWS.py
+
+### 6. Run the Pipeline
+
+```
+dvc repro
+```
+
+### 7. Hyperparameter tuning 
+
+Change the parameters in the params.yaml for better results.
+
+
+--------------------------------
 Titanic-Ops-Using-DVC-AWS-Mlflow
 
 Project Organization
